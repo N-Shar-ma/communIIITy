@@ -1,1 +1,32 @@
-h1 logged in
+doctype html
+html(lang="en")
+  head
+    title CommunIIITy
+    link(rel="stylesheet", href="/styles.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  body#index_body
+    nav.nav_bar        
+        a(href="/" ).nav_a 
+                h1 communIIITy
+        ul.nav_ul 
+            a( href=`/profiles/${user.id}`)
+                li.nav_op Dashboard 🏡
+            a( href="/logout")
+                li.nav_op Logout 🚪    
+    h1#index_h1 Latest Questions 🔥
+    section#index_div_container 
+      each question in questions
+        div.index_question 
+          div.index_question_title 
+            a( href=`/questions/${question.id}`) #{question.title}
+          div.index_question_author
+            span 🔼 #{question.voteCount} 
+            span#index_date #{question.createdAt.toDateString().substring(4)}
+            a( href=`/profiles/${question.author}`) #{question.authorName}
+    if (prevPage || nextPage)
+      section.page_nav_section
+        if prevPage
+          a.page_link(href=`/?page=${prevPage}`) 👈 
+        span.page_link 📄 #{currPage} 
+        if nextPage
+          a.page_link(href=`/?page=${nextPage}`) 👉
