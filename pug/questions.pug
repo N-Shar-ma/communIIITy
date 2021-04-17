@@ -1,0 +1,40 @@
+head 
+    link(rel="stylesheet", href="/styles.css")
+    script(src="/scripts/voting.js" defer) 
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+body#questions_body 
+    nav.nav_bar        
+        a(href="/" ).nav_a 
+                h1 communIIITy 
+        ul.nav_ul
+            a( href=`/profiles/${user.id}`)
+                li.nav_op Dashboard 🏡
+            a( href="/logout")
+                li.nav_op Logout 🚪         
+    h1#questions_h1 #{question.title}
+    div#questions_main
+        if question.body 
+            div#questions_question_body !{question.body}
+        div#questions_meta_info
+            div#questions_vote_area(data-qid=`${question._id}`) 
+                button#questions_up_vote(class= question.isUpvoted ? "voted" : "")
+                    svg(width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd")
+                        path(d="M0 21l12-18 12 18h-24zm12-16.197l-10.132 15.197h20.263l-10.131-15.197")
+                span#questions_vote_count #{question.voteCount} 
+            span#index_date #{question.createdAt.toDateString().substring(4)}
+            div#questions_author
+                a( href=`/profiles/${question.author}`) #{question.authorName}
+        h2#questions_h2 Answers
+        each answer in answers
+            p.questions_answer_body(class= answer.highlighted ? "highlighted" : "") #{answer.body}
+            div.questions_answer_meta_info 
+                div.questions_answer_vote_area(data-aid=`${answer._id}`)
+                    button.questions_answer_up_vote(class= answer.isUpvoted ? "voted" : "") 🔼
+                    span.questions_answer_vote_count #{answer.voteCount} 
+                span.questions_answer_date #{answer.createdAt.toDateString().substring(4)}
+                div.questions_answer_author
+                    a( href=`/profiles/${answer.author}`) #{answer.authorName}
+        form#questions_form(action=`/questions/${question._id}` method="post")
+            textarea#questions_form_answer(name="body", cols="30", rows="10" placeholder="Know the answer to this question? Write it here!")
+            button#questions_form_btn(type="submit") Submit Answer
+            
