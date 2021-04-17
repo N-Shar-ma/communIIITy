@@ -3,8 +3,10 @@
 const fs = require('fs');
 const readline = require('readline');
 var https = require('https');
+const Question = require('./models/question');
+const Answer = require("./models/answer")
 
-makeGetRequestAndUpdateDb(url) {
+async function makeGetRequestAndUpdateDb(url) {
  var options = { 
   hostname: url, 
   port: 4433, 
@@ -15,8 +17,10 @@ makeGetRequestAndUpdateDb(url) {
   ca: fs.readFileSync('ca-crt.pem') };
 
   var req = https.request(options, function(res) { 
-    res.on('data', function(data) { 
-        //TODO nehal, read this json and put it into db 
+    res.on('data', async function(data) { 
+        const { questions, answers } = data;
+        await Question.create(questions) 
+        await Answer.create(answers)
       }); 
   });
   req.end();
