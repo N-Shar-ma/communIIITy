@@ -29,7 +29,9 @@ body#questions_body
             p.questions_answer_body(class= answer.highlighted ? "highlighted" : "") #{answer.body}
             div.questions_answer_meta_info 
                 div.questions_answer_vote_area(data-aid=`${answer._id}`)
-                    button.questions_answer_up_vote(class= answer.isUpvoted ? "voted" : "") 🔼
+                    button.questions_answer_up_vote(class= answer.isUpvoted ? "voted" : "")
+                        svg(width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd")
+                            path(d="M0 21l12-18 12 18h-24zm12-16.197l-10.132 15.197h20.263l-10.131-15.197")
                     span.questions_answer_vote_count #{answer.voteCount} 
                 span.questions_answer_date #{answer.createdAt.toDateString().substring(4)}
                 div.questions_answer_author
