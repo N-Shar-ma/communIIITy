@@ -2,7 +2,8 @@ const mongoose = require("mongoose")
 const answerSchema = new mongoose.Schema({
     body: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     question: {
         type: mongoose.SchemaTypes.ObjectId,

@@ -5,11 +5,13 @@ const questionSchema = new mongoose.Schema({
         required: true,
         trim: true,
         minLength: 10,
-        maxLength: 350
+        maxLength: 350,
+        unique: true
     },
     body: {
         type: String,
-        trim: true
+        trim: true,
+        unique: true
     },
     author: {
         type: mongoose.SchemaTypes.ObjectId,
