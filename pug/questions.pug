@@ -26,7 +26,7 @@ body#questions_body
                 a( href=`/profiles/${question.author}`) #{question.authorName}
         h2#questions_h2 Answers
         each answer in answers
-            p.questions_answer_body(class= answer.highlighted ? "highlighted" : "") #{answer.body}
+            div.questions_answer_body(class= answer.highlighted ? "highlighted" : "") !{answer.body}
             div.questions_answer_meta_info 
                 div.questions_answer_vote_area(data-aid=`${answer._id}`)
                     button.questions_answer_up_vote(class= answer.isUpvoted ? "voted" : "")
@@ -37,6 +37,6 @@ body#questions_body
                 div.questions_answer_author
                     a( href=`/profiles/${answer.author}`) #{answer.authorName}
         form#questions_form(action=`/questions/${question._id}` method="post")
-            textarea#questions_form_answer(name="body", cols="30", rows="10" placeholder="Know the answer to this question? Write it here!")
+            textarea#questions_form_answer(name="body", cols="30", rows="10" placeholder="Know the answer to this question? Write it here using markdown!")
             button#questions_form_btn(type="submit") Submit Answer
             

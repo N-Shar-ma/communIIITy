@@ -9,6 +9,10 @@ const answerSchema = new mongoose.Schema({
         required: true,
         ref: "Question"
     },
+    questionTitle: {
+        type: String,
+        required: true
+    },
     author: {
         type: mongoose.SchemaTypes.ObjectId,
         required: true,

@@ -47,6 +47,7 @@ router.get("/:questionId", checkAuthenticated, async (req, res) => {
 async function getAnswersForTemplating(questionId, user) {
     let answers = await Answer.find({ question: questionId }).sort({ voteCount: "desc" }).lean().exec()
     answers = answers.map(answer => {
+        answer.body = dompurify.sanitize(marked(answer.body))
         if(user.upvotedAnswers.includes(answer._id)) return {...answer, isUpvoted : true}
         else return answer
     })
@@ -72,7 +73,9 @@ router.post("/", checkAuthenticated, async (req, res) => {
 
 router.post("/:questionId", checkAuthenticated, async (req, res) => {
     try {
-        const answer = await Answer.create({ ...req.body, author: req.user.id, authorName: req.user.name, question: req.params.questionId })
+        const question = await Question.findById(req.params.questionId).exec()
+        const questionTitle = question.title
+        const answer = await Answer.create({ ...req.body, author: req.user.id, authorName: req.user.name, question: req.params.questionId, questionTitle })
         res.status(200).redirect(`/questions/${req.params.questionId}/${answer.id}`)
     } catch(e) {
         console.log(e)
