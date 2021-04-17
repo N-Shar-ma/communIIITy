@@ -1,0 +1,28 @@
+head 
+    link(rel="stylesheet", href="/styles.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+body#profile_body
+    nav.nav_bar        
+        a(href="/" ).nav_a 
+                h1 communIIITy 
+        ul.nav_ul
+            a( href=`/profiles/${user.id}`)
+                li.nav_op Dashboard 🏡
+            a( href="/logout")
+                li.nav_op Logout 🚪            
+    h1#profile_h1 #{profileName}
+    if isDashboard 
+        a(href="/questions/new")#profile_answer_btn Post a Question 
+    div#profile_questions
+        if questions
+            h2#profile_question_h2 Questions
+            each question in questions
+                p.profile_question_title
+                    a( href=`/questions/${question.id}`) #{question.title}
+    div#profile_answers
+        if answers
+            h2#profile_answer_h2 Answers
+            each answer in answers
+                p.profile_answer_body
+                    a( href=`/questions/${answer.question}/${answer.id}`) #{answer.body})
+    
