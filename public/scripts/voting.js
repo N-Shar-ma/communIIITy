@@ -28,12 +28,12 @@ const ansUpvoteButtons = [...document.querySelectorAll(".questions_answer_up_vot
 ansUpvoteButtons.forEach(button => button.addEventListener("click", upvoteAnswerClicked))
 
 async function upvoteAnswerClicked(e) {
-    const ansVoteCountEl = e.target.nextSibling
-    const answerId = e.target.parentElement.dataset.aid
-    e.target.classList.toggle("voted")
+    const ansVoteCountEl = e.currentTarget.nextElementSibling
+    const answerId = e.currentTarget.parentElement.dataset.aid
+    e.currentTarget.classList.toggle("voted")
     const currentVoteCount = parseInt(ansVoteCountEl.innerText)
     let change = "up"
-    if(!e.target.classList.contains("voted")) {
+    if(!e.currentTarget.classList.contains("voted")) {
         change = "down"
         ansVoteCountEl.innerText = currentVoteCount - 1;
     } else {

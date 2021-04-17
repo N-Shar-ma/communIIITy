@@ -427,6 +427,8 @@ transform: scale(1.1);
     transform: scale(1);
     background: transparent;
     border: none;
+    fill: var(--background_lighter);
+    stroke-width: 3px;
 }
 #questions_up_vote:hover,
 #questions_up_vote:focus{
@@ -503,6 +505,7 @@ transform: scale(1.1);
     transform: scale(1);
     background: transparent;
     border: none;
+    fill: var(--background_lighter);
 }
 
 .questions_answer_up_vote:hover,
@@ -525,7 +528,6 @@ transform: scale(1.1);
 
 #questions_up_vote.voted, .questions_answer_up_vote.voted{
     fill: var(--heading_color);
-
 }
 
 #questions_form{
