@@ -2,7 +2,7 @@
 GAUS' team submission for Hackofiesta 2.0
 
 ## Installation Instructions
-Installation invoves two parts: setting up the frontend webapp, and connecting to the backbone network.
+Installation invoves two parts: setting up the frontend webapp, and connecting to the backbone network. Run `npm install` to install the dependencies.
 
 ### Setting up the webapp
 1. Set up nginx/apache/similar and install your public certificates
@@ -18,3 +18,7 @@ Installation invoves two parts: setting up the frontend webapp, and connecting t
 1. Set up a cronjob/jobber/script to run `node sync.js` every 18-24 hours(fewer if you would like more frequent updates)
     * If you are using heroku, you can run this on startup as heroku instances are restarted every 24 hours
 1. Start syncserver.js with `node syncserver.js`
+
+## Development
+
+Follow installation instructions, but you can also install nodemon as a dev dependency for a better development experience.
