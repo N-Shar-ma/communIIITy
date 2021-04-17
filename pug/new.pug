@@ -1,0 +1,19 @@
+head 
+    link(rel="stylesheet", href="/styles.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js" defer) 
+    script(src="/scripts/preview.js" defer) 
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+body#new_body
+    nav.nav_bar        
+        a(href="/" ).nav_a 
+                h1 communIIITy 
+        ul.nav_ul
+            a( href=`/profiles/${user.id}`)
+                li.nav_op Dashboard 🏡
+            a( href="/logout")
+                li.nav_op Logout 🚪
+    form#new_form(action="/questions", method="post") 
+        input#new_question_title(type="text" name="title" placeholder="Enter the Title of your question" required minlength="10" maxlength="350")
+        textarea#new_question(name="body", cols="25", rows="7" placeholder="Enter the text of your question here, you may use markdown as needed and will see a preview on the box at the right.")
+        div#preview
+        button#new_question_btn(type="submit") Create new question 📝
