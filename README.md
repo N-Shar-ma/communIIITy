@@ -22,3 +22,6 @@ Installation involves two parts: setting up the frontend webapp, and connecting 
 ## Development
 
 Follow installation instructions, but also install nodemon and dotenv as dev dependencies, and run `npm run devStart` or `nodemon server.js`. Also, create and add google credentials (client id and client secret), redirect uri, cookie secret and the institute's college domain (for example `iiitl.ac.in`) in the .env file.
+
+## Presentation Link
+https://github.com/N-Shar-ma/communIIITy/blob/master/Presentation.pdf
