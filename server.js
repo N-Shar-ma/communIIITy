@@ -9,8 +9,8 @@ const initializePassport = require("./passport-config")
 initializePassport()
 
 const indexRouter = require("./routes/index")
-// const questionsRouter = require("./routes/questions")
-// const profilesRouter = require("./routes/profiles")
+const questionsRouter = require("./routes/questions")
+const profilesRouter = require("./routes/profiles")
 
 app.set("view engine", "pug")
 app.set("views", __dirname + "/pug")
@@ -32,8 +32,8 @@ db.on("error", err => console.error(err))
 db.once("open", () => console.log("connected to Pranav's database"))
 
 app.use("/", indexRouter)
-// app.use("/questions", questionsRouter)
-// app.use("/profiles", profilesRouter)
+app.use("/questions", questionsRouter)
+app.use("/profiles", profilesRouter)
 
 app.listen(process.env.PORT || 3000, () => {
     console.log("listening at http://localhost:3000/ in development")
