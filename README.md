@@ -16,4 +16,5 @@ Installation invoves two parts: setting up the frontend webapp, and connecting t
 1. Update sync.js and syncserver.js with the certificate and details.
 1. Add your tezos details to enviornment variables as required by updater.py.
 1. Set up a cronjob/jobber/script to run `node sync.js` every 18-24 hours(fewer if you would like more frequent updates)
+    * If you are using heroku, you can run this on startup as heroku instances are restarted every 24 hours
 1. Start syncserver.js with `node syncserver.js`
