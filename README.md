@@ -2,13 +2,13 @@
 GAUS' team submission for Hackofiesta 2.0
 
 ## Installation Instructions
-Installation invoves two parts: setting up the frontend webapp, and connecting to the backbone network. Run `npm install` to install the dependencies.
+Installation involves two parts: setting up the frontend webapp, and connecting to the backbone network. Run `npm install` to install the dependencies.
 
 ### Setting up the webapp
 1. Set up nginx/apache/similar and install your public certificates
 1. Start mongodb locally(preferred) or on a provider like AWS
 1. Run `npm start`, or `node server.js`. Remember to update your ports and mongodb database urls in the .env file as necessary.
-2. Creae and add google credentials (client id and client secret), redirect uri, cookie secret and the institute's college domain (for example `iiitl.ac.in`) 
+2. Create and add google credentials (client id and client secret), redirect uri, cookie secret and the institute's college domain (for example `iiitl.ac.in`) 
 
 ### Connecting to backbone
 1. Currently, you need a signed certificate signed by certificate authority(ca) Pranav Gade\<pranavgade20@gmail.com\> to connect to the network. This will be moved to a crowd-concensus/proof-of-stake model in the future.
@@ -22,4 +22,5 @@ Installation invoves two parts: setting up the frontend webapp, and connecting t
 
 ## Development
 
-Follow installation instructions, but you can also install nodemon and dotenv as dev dependencies for a better development experience, and run `nm run devStart` or `nodemon server.js`.
+Follow installation instructions, but also install nodemon and dotenv as dev dependencies, and run `nm run devStart` or `nodemon server.js`. Also, create and add google credentials (client id and client secret), redirect uri, cookie secret and the institute's college domain (for example `iiitl.ac.in`) in the .env file.
+
