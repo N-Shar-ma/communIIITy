@@ -10,7 +10,10 @@ body#profile_body
                 li.nav_op Dashboard 🏡
             a( href="/logout")
                 li.nav_op Logout 🚪            
-    h1#profile_h1 #{isDashboard && "Hi "} #{profileName}
+    if isDashboard 
+        h1#profile_h1 Hi #{profileName}!
+    if !isDashboard
+        h1#profile_h1 #{profileName}
     if isDashboard 
         a(href="/questions/new")#profile_answer_btn Post a Question 
     div#profile_questions
