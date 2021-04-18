@@ -37,3 +37,10 @@ https://github.com/N-Shar-ma/communIIITy/blob/master/Presentation.pdf
 
 ## Demo Link
 https://youtu.be/Y4u6fQCsR8g
+
+## Screenshots
+![6acdc4bd-5d7f-45e2-940b-ece06006714a](https://user-images.githubusercontent.com/26707046/115133797-97274000-a028-11eb-860f-39384f41fc44.png)
+![52c6690a-cb87-472d-b008-c867a153e1e4](https://user-images.githubusercontent.com/26707046/115133799-98586d00-a028-11eb-9603-7aca636636f7.png)
+![e794ea5f-9ea9-4c9f-871c-e47531e007bc](https://user-images.githubusercontent.com/26707046/115133802-98f10380-a028-11eb-922f-2369ea5de40f.png)
+![06bc136b-ec0c-4ab2-a9ba-4c493fb65d7f](https://user-images.githubusercontent.com/26707046/115133803-99899a00-a028-11eb-9855-9357c6cac114.png)
+
