@@ -15,6 +15,7 @@ importKey(
   process.env.SECRET
 ).catch((e) => console.error(e));
 
+fs.truncateSync('servers.txt')
 
 Tezos.contract
   .at(process.env.CONTRACTADDR)
