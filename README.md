@@ -15,7 +15,7 @@ Installation involves two parts: setting up the frontend webapp, and connecting 
 1. Add the said certificate and your api domain/url to the storage of the Tezos contract(not deployed on mainnet yet, but see contract.py).
 1. Update sync.js and syncserver.js with the certificate and details.
 1. Add your tezos details to enviornment variables as required by updater.py.
-1. Run `node updater.js` once. You typically won't need to execute it every day, as it is meant for peer discovery. When you do run it though, make sure to clear the contents of server.txt beforehand.
+1. Run `node updater.js` once. You typically won't need to execute it every day, as it is meant for peer discovery.
 1. Set up a cronjob/jobber/script to run `node sync.js` every 18-24 hours(fewer if you would like more frequent updates)
     * If you are using heroku, you can run this on startup as heroku instances are restarted every 24 hours
 1. Start syncserver.js with `node syncserver.js`
