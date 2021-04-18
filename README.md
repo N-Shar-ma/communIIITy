@@ -38,6 +38,8 @@ https://github.com/N-Shar-ma/communIIITy/blob/master/Presentation.pdf
 ## Demo Link
 https://youtu.be/Y4u6fQCsR8g
 
+You can also visit the live demo at http://commun-iiit-y.herokuapp.com/ (you need an email ending with @iiitl.ac.in to login)
+
 ## Screenshots
 Creating a question:
 ![6acdc4bd-5d7f-45e2-940b-ece06006714a](https://user-images.githubusercontent.com/26707046/115133797-97274000-a028-11eb-860f-39384f41fc44.png)
