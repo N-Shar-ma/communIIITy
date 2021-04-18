@@ -2,9 +2,9 @@
 GAUS team's submission for HackOFiesta 2.0
 
 ## The problem
-There are no good solutions for an organization(like our college, IIIT Lucknow) to discuss technical questions with their peers and instructors. We realized that this was a problem when our professor, Saurabh Sir, started receiving multiple emails with nearly identical questions. We had already tried and failed to use platforms like stackoverflow teams(which needs a subscription after 3 months). So, we decided to make a customizable solution geared toward catering the needs of individual institutions.
+There are no good online solutions for students of an institute(like our college, IIIT Lucknow) to discuss technical questions among their peers and instructors. We realized that this was a problem when our professor, Saurabh Sir, started receiving multiple emails with nearly identical questions. We had already tried and failed to use platforms like stackoverflow teams(which needs a subscription after 3 months). So, we decided to make a customizable solution geared towards catering to the needs of individual institutions.
 
-## Our Soultion
+## Our Solution
 To tackle this problem and help everyone learn more effectively, we have made communIIITy. communIIITy is a platform where students and instructors from an institute can easily interact with each other, be it via asking questions or posting answers. Unlike global platforms like StackOverflow, communIIITy is primarily geared towards people from individual organizations. This provides an exclusive communIIITy (pun intended!) platform, customized to its unique needs. It also gives liberty to have discussions among people with a similar knowledge level and helps avoid the financial overhead of buying a teams subscription on StackOverflow. communIIITy is based upon the decentralized matrix protocol, which is used to share highest upvoted questions and answers are shared among peers (other institutes). It also means lower downtime when compared to websites such as StackOverflow which can face outages.
 
 communIIITy uses Tezos blockchain for peer discovery, and uses that data to exchange information with its peers. The peer-to-peer exchange is cryptographically secured and authenticated via signed trusted certificates.
@@ -14,7 +14,7 @@ Installation involves two parts: setting up the frontend webapp, and connecting 
 
 ### Setting up the webapp
 1. Set up nginx/apache/similar and install your public certificates
-1. Start mongodb locally(preferred) or on a provider like AWS
+1. Start mongodb locally(preferred) or on a provider like MongoDB Atlas
 1. Run `npm start`, or `node server.js`. Remember to update your ports and mongodb database urls in the .env file as necessary.
 
 ### Connecting to backbone
