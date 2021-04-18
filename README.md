@@ -1,5 +1,5 @@
 # communIIITy
-GAUS' team submission for Hackofiesta 2.0
+GAUS team's submission for Hackofiesta 2.0
 
 ## The problem
 There are no good solutoins for an organisation(like our college, IIIT Lucknow) to discuss technical questions with their peers and instructors. We realised that this was a problem when our professor, Saurabh Sir, started receiving multiple nearly identical questions. We had already tried and failed to use platforms like stackoverflow teams(which needs a subscription after 3 months). So, we decided to make a customizable solution geared toward catering the needs of individual institutions.
