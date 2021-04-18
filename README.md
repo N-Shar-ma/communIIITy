@@ -1,6 +1,14 @@
 # communIIITy
 GAUS' team submission for Hackofiesta 2.0
 
+## The problem
+There are no good solutoins for an organisation(like our college, IIIT Lucknow) to discuss technical questions with their peers and instructors. We realised that this was a problem when our professor, Saurabh Sir, started receiving multiple nearly identical questions. We had already tried and failed to use platforms like stackoverflow teams(which needs a subscription after 3 months). So, we decided to make a customizable solution geared toward catering the needs of individual institutions.
+
+## Our Soultion
+To tackle this problem and help everyone learn more effectively, we have made communIIITy. communIIITy is a platform where students and instructors from an institute can easily interact with each other, be it via asking questions or posting answers. Unlike global platforms like StackOverflow, communIIITy is primarily geared towards people from individual organizations. This provides an exclusive communIIITy (pun intended!) platform, customized to its unique needs. It also gives liberty to have discussions among people with a similar knowledge level and helps avoid the financial overhead of buying a teams subscription on StackOverflow. communIIITy is based upon the decentralised matrix protocol, which is used to share highest upvoted questions and answers are shared among peers (other institutes). It also means lower downtime when compared to websites such as StackOverflow which can face outages.
+
+communIIITy uses Tezos blockchain for peer discovery, and uses that data to exchange information with its peers. The peer-to-peer exchange is cryptographically secured and authenticated via signed trusted certificates.
+
 ## Installation Instructions
 Installation involves two parts: setting up the frontend webapp, and connecting to the backbone network. Run `npm install` to install the dependencies.
 
