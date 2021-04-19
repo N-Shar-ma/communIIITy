@@ -1,6 +1,8 @@
 # communIIITy
 GAUS team's submission for HackOFiesta 2.0
 
+Devfolio Submission Link: https://devfolio.co/submissions/communiiity-2197
+
 ## The problem
 There are no good online solutions for students of an institute(like our college, IIIT Lucknow) to discuss technical questions among their peers and instructors. We realized that this was a problem when our professor, Saurabh Sir, started receiving multiple emails with nearly identical questions. We had already tried and failed to use platforms like stackoverflow teams(which needs a subscription after 3 months). So, we decided to make a customizable solution geared towards catering to the needs of individual institutions.
 
